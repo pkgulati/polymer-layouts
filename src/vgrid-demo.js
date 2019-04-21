@@ -48,10 +48,26 @@ class VaadinGridDemo extends PolymerElement {
         // See https://developers.google.com/web/updates/2016/06/passive-event-listeners
         setPassiveTouchGestures(true);
 
-        this.$.addresscolumn.renderer = (root, grid, rowData) => {
+       
+
+        console.log('constructor');
+       
+    }
+
+    firstDataRendered(params) {
+        params.api.sizeColumnsToFit()
+    }
+
+    ready() {
+        // If you override ready, always call super.ready() first.
+        super.ready();
+        // Output the custom element's HTML tag to the browser console.
+        // Open your browser's developer tools to view the output.
+        console.log('ready', this.tagName);
+
+          this.$.addresscolumn.renderer = (root, grid, rowData) => {
             root.textContent = `${rowData.item.address.street}, ${rowData.item.address.city}`;
         };
-
 
         this.$.grid.items =  
         [
@@ -539,18 +555,7 @@ class VaadinGridDemo extends PolymerElement {
            
         ];
 
-    }
 
-    firstDataRendered(params) {
-        params.api.sizeColumnsToFit()
-    }
-
-    ready() {
-        // If you override ready, always call super.ready() first.
-        super.ready();
-        // Output the custom element's HTML tag to the browser console.
-        // Open your browser's developer tools to view the output.
-        console.log(this.tagName);
     }
 
     static get template() {
