@@ -20,6 +20,7 @@
     "@polymer/paper-listbox": "^3.0.1",
     "@polymer/paper-menu-button": "^3.0.1",
     "@polymer/polymer": "latest",
+    "@vaadin/vaadin-grid": "^5.3.3",
     "@webcomponents/webcomponentsjs": "latest",
     "ag-grid-community": "^20.2.0",
     "ag-grid-polymer": "^20.2.0"

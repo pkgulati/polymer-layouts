@@ -15,7 +15,7 @@ import '@polymer/paper-card/paper-card.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/app-route/app-location.js';
 import './aggrid-demo.js';
-
+import './vgrid-demo.js';
 class DemoApp extends PolymerElement {
  
     static get template2 () {
@@ -91,7 +91,7 @@ class DemoApp extends PolymerElement {
               </app-toolbar>
             </app-header>
 
-            <aggrid-demo></aggrid-demo>
+            <vgrid-demo></vgrid-demo>
 
       </app-header-layout>
   </app-drawer-layout>
