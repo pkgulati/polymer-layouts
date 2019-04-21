@@ -7,6 +7,7 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
   static get template() {
     return html`
       <style>
+      
         :host {
           width:100%;
           min-height:16px;

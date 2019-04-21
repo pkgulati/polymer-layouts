@@ -14,6 +14,7 @@ import '@polymer/paper-item/paper-item.js';
 import '@polymer/paper-card/paper-card.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/app-route/app-location.js';
+import './aggrid-demo.js';
 
 class DemoApp extends PolymerElement {
  
@@ -90,8 +91,8 @@ class DemoApp extends PolymerElement {
               </app-toolbar>
             </app-header>
 
-            <form1-demo></form1-demo>
-            
+            <aggrid-demo></aggrid-demo>
+
       </app-header-layout>
   </app-drawer-layout>
 
