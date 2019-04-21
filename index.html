@@ -10,7 +10,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="description" content="Template Polymer 3.0 App">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#fff">
@@ -20,16 +21,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" async></script>
   <script src="./src/start-polymer3.js" type="module" async></script>
   <script src="./src/form1-demo.js" type="module" async></script>
+
+  <script src="./src/demo-app.js" type="module" async></script>
   <title>Form Layout</title>
   <style>
     body {
-      /* outline: 1px solid blue; */
+      margin:0px;
     }
   </style>
 </head>
 <body >
   
-  <form1-demo>
+  <demo-app>
       <p id="jsyes"></p>
       <script type="text/javascript">
         document.getElementById('jsyes').innerHTML='Loading...'
@@ -37,17 +40,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <noscript>
         <p>Could not render the custom element. Check that JavaScript is enabled.</p>
       </noscript>
-  </form1-demo>
+  </demo-app>
 
-  <!-- <start-polymer3>
-    <h1>Form Layout</h1>
-    <p id="jsyes"></p>
-    <script type="text/javascript">
-      document.getElementById('jsyes').innerHTML='Loading...'
-    </script>
-    <noscript>
-      <p>Could not render the custom element. Check that JavaScript is enabled.</p>
-    </noscript>
-  </start-polymer3> -->
 </body>
 </html>

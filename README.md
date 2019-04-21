@@ -38,6 +38,9 @@ https://ninjaforms.com/extensions/layout-styles/
 https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.baymard.com%2Fresearch%2Fmedia_files%2Fattachments%2F29898%2Foriginal%2Fresearch-media-file-e741283db76692988610f0f8ecc5ad00.jpg&imgrefurl=https%3A%2F%2Fbaymard.com%2Fblog%2Favoid-multi-column-forms&docid=kBblFTki_g6zLM&tbnid=cn7z7IpCqGqiuM%3A&vet=10ahUKEwjgoemKruDhAhUVWysKHXRlA2MQMwhHKAkwCQ..i&w=962&h=833&bih=586&biw=1175&q=multi%20column%20form%20layout&ved=0ahUKEwjgoemKruDhAhUVWysKHXRlA2MQMwhHKAkwCQ&iact=mrc&uact=8
 
 
+https://codepen.io/anastasef/pen/RPmKQE
+
+
 /* Not supported */
 :host ::slotted(div) {
   --custom-color: red;
