@@ -17,6 +17,7 @@ import '@polymer/paper-checkbox/paper-checkbox.js';
 import '@polymer/paper-input/paper-input.js';
 import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings';
 import './fields-group.js';
+import 'ag-grid-polymer';
 
 class Form1Demo extends PolymerElement {
   static get properties () {
@@ -45,6 +46,23 @@ class Form1Demo extends PolymerElement {
     // See https://developers.google.com/web/updates/2016/06/passive-event-listeners
     setPassiveTouchGestures(true);
     this.message = 'Hello World! I\'m a Polymer element :)';
+
+    this.columnDefs = [
+        { headerName: "Make", field: "make" },
+        { headerName: "Model", field: "model" },
+        { headerName: "Price", field: "price" },
+      ];
+  
+      this.rowData = [
+        { make: "Toyota", model: "Celica", price: 35000 },
+        { make: "Ford", model: "Mondeo", price: 32000 },
+        { make: "Porsche", model: "Boxter", price: 72000 }
+      ];
+
+  }
+
+  firstDataRendered(params) {
+    params.api.sizeColumnsToFit()
   }
 
   ready(){
@@ -78,8 +96,16 @@ class Form1Demo extends PolymerElement {
     // The html helper function makes this easy.
     return html`
 
+      <link rel="stylesheet" href="../../node_modules/ag-grid-community/dist/styles/ag-grid.css">
+      <link rel="stylesheet" href="../../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css">
       <h1>Form Layout</h1>
-     
+      <ag-grid-polymer style="width: 100%; height: 350px;"
+                         class="ag-theme-balham"
+                           rowData="{{rowData}}"
+                           columnDefs="{{columnDefs}}"
+                           on-first-data-rendered="{{firstDataRendered}}">
+      </ag-grid-polymer>
+
       <fields-group>
           <paper-input label="Name" value="Praveen"></paper-input>
           <paper-input label="Age" value="47"></paper-input>

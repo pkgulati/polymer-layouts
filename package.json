@@ -20,6 +20,8 @@
     "@polymer/paper-listbox": "^3.0.1",
     "@polymer/paper-menu-button": "^3.0.1",
     "@polymer/polymer": "latest",
-    "@webcomponents/webcomponentsjs": "latest"
+    "@webcomponents/webcomponentsjs": "latest",
+    "ag-grid-community": "^20.2.0",
+    "ag-grid-polymer": "^20.2.0"
   }
 }
