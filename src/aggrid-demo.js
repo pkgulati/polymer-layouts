@@ -89,6 +89,7 @@ class AGGridDemo extends PolymerElement {
       <link rel="stylesheet" href="../../node_modules/ag-grid-community/dist/styles/ag-grid.css">
       <link rel="stylesheet" href="../../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css">
       <h1>Grid Demo</h1>
+      <app-toolbar> ddd</app-toolbar>
       <ag-grid-polymer style="width: 100%; height: 350px;"
                          class="ag-theme-balham"
                            rowData="{{rowData}}"

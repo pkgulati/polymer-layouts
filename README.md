@@ -46,3 +46,5 @@ https://codepen.io/anastasef/pen/RPmKQE
   --custom-color: red;
 }
 
+https://github.com/marmelab/admin-on-rest/blob/master/docs/Tutorial.md
+
