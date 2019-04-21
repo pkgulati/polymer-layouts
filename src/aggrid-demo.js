@@ -46,8 +46,7 @@ class AGGridDemo extends PolymerElement {
     // Resolve warning about scroll performance 
     // See https://developers.google.com/web/updates/2016/06/passive-event-listeners
     setPassiveTouchGestures(true);
-    this.message = 'Hello World! I\'m a Polymer element :)';
-
+  
     this.columnDefs = [
         { headerName: "Make", field: "make" },
         { headerName: "Model", field: "model" },
@@ -89,7 +88,7 @@ class AGGridDemo extends PolymerElement {
 
       <link rel="stylesheet" href="../../node_modules/ag-grid-community/dist/styles/ag-grid.css">
       <link rel="stylesheet" href="../../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css">
-      <h1>Form Layout</h1>
+      <h1>Grid Demo</h1>
       <ag-grid-polymer style="width: 100%; height: 350px;"
                          class="ag-theme-balham"
                            rowData="{{rowData}}"

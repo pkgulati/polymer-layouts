@@ -12,10 +12,13 @@ export default class ClickableCellRenderer extends PolymerElement {
         this.params = params;
 
         this.cell = {row: params.value, col: params.colDef.headerName};
+        this.data = params.data;
+   
     }
 
     click() {
         console.log("Child Cell Clicked: " + JSON.stringify(this.cell));
+        console.log(JSON.stringify(this.data));
     }
 }
 
