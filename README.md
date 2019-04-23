@@ -4,6 +4,8 @@ This repository is just to create some Layout Examples for Polymer 3.0. For Exam
 * Form Layout
 * Page Header 
 
+## Material design
+https://material.io/design/components/text-fields.html#filled-text-field
 
 ## Links
 

@@ -19,22 +19,26 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
         }
 
         :host ::slotted(*) {
-            min-width: 300px;
-            max-width: 400px;
+            min-width: 250px;
+            max-width: 500px;
             flex-basis: auto; /* default value */
             flex-grow: 1;
             margin-left:8px;
-            margin-right:8px     
+            margin-right:8px  
+            align-items: center;
+            justify-content: center;
         }
 
         @media (max-width:700px) {
             :host ::slotted(*) {
-                min-width: 300px;
+                min-width: 250px;
                 max-width: 600px;
                 flex-basis: auto; /* default value */
                 flex-grow: 1;
                 margin-left:8px;
                 margin-right:8px 
+                align-items: center;
+                justify-content: center;
             } 
         }
           

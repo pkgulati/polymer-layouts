@@ -16,6 +16,13 @@ import '@polymer/paper-button/paper-button.js';
 import '@polymer/app-route/app-location.js';
 import './aggrid-demo.js';
 import './vgrid-demo.js';
+
+import '@polymer/paper-tabs/paper-tabs.js';
+import '@polymer/paper-tabs/paper-tab.js';
+import '@polymer/iron-pages/iron-pages.js';
+import '@polymer/paper-input/paper-input.js';
+import './fields-group.js';
+
 class DemoApp extends PolymerElement {
  
     static get template2 () {
@@ -35,6 +42,7 @@ class DemoApp extends PolymerElement {
           :root {
             --accent-color:#4285f4;
             --light-primary-color: #4285f4;
+            --paper-tab-ink: #8c9eff;
           }
 
           app-toolbar {
@@ -49,6 +57,21 @@ class DemoApp extends PolymerElement {
 
           app-drawer-layout:not([narrow]) [drawer-toggle] {
             display: none;
+          }
+
+          .container  {
+            padding:16px;
+            
+          }
+    
+          paper-tabs {
+              --paper-tab-ink:#8c9eff;
+          }
+          paper-tab {
+            --paper-tab-ink:#8c9eff;
+          }
+          :root {
+            --paper-tab-ink:#8c9eff;
           }
 
         </style>
@@ -91,12 +114,59 @@ class DemoApp extends PolymerElement {
               </app-toolbar>
             </app-header>
 
-           <start-polymer3></start-polymer3>
+            <paper-tabs selected="{{selected}}" scrollable>
+            <paper-tab>Tab 0</paper-tab>
+            <paper-tab>Tab 1</paper-tab>
+            <paper-tab>Tab 2</paper-tab>
+            <paper-tab>Tab 3</paper-tab>
+          </paper-tabs>
+          
+          <div class="container">
+            <iron-pages selected="{{selected}}">
+              <div>
+              <fields-group type="auto">
+                  <paper-input label="Name" value="Praveen"></paper-input>
+                  <paper-input label="Age" value="47"></paper-input>
+                  <div>text1</div>
+                  <div>
+                    <p>logn text sadasdasddasdadad for testing</p>
+                    <p>asdasdasd</p>
+                    <p>asdasdasd</p>
+                    <p>asdasdasd</p>
+                    <p>asdasdasd</p>
+                  </div>
+                  <paper-input label="Company" value="Infosys"></paper-input>
+                  <paper-input label="Product" value="Finacle"></paper-input>
+                  <paper-input label="Qualification" value="B.Tech."></paper-input>
+                  <paper-input label="Solution" value="All"></paper-input>
+              </fields-group>
+              </div>
+              <div>Page 1</div>
+              <div>Page 2</div>
+              <div>Page 3</div>
+            </iron-pages>
+          </div>
 
       </app-header-layout>
   </app-drawer-layout>
 
             `;
+      }
+
+      constructor() {
+        // If you override the constructor, always call the 
+        // superconstructor first.
+        super();
+        this.selected = 0;
+      }
+
+      static get properties () {
+        return {
+          selected: {
+            type: Number,
+            value: 0
+          }
+        }
       }
 }
 
