@@ -162,12 +162,33 @@ class StartPolymer3 extends PolymerElement {
           --paper-checkbox-unchecked-ink-color: #FFFFFF;
         }
 
+        .container3 {
+          position: relative;
+          display: flex;
+          flex-flow: row wrap;
+          padding-left:8px;
+          padding-right:8px;
+          margin-bottom : 16px;
+          border : solid 1px yellow;
+        }
+
+        .container3 > paper-input {
+          min-width: 200px;
+          max-width: 400px;
+          flex-basis: auto; /* default value */
+          flex-grow: 1;
+          margin-left:8px;
+          margin-right:8px  
+          margin-bottom : 8px;
+        }
+
         .container {
           position: relative;
           display: flex;
           flex-flow: row wrap;
           padding-left:8px;
           padding-right:8px;
+          
         }
 
         .container > paper-input {
@@ -196,9 +217,54 @@ class StartPolymer3 extends PolymerElement {
           margin-right:8px  
         }
         
+        .container2 > paper-input {
+          --paper-input-container: {
+            padding : 0px 0px 16px 0px;
+          }
+        }
+
+        .oe-custom {
+          --paper-input-container-input: {
+            border: 1px solid var(--secondary-text-color);
+            border-radius: 4px;
+            padding: 12px 8px 4px 8px;
+            box-sizing: border-box;
+          }
+          --paper-input-container-input-focus: {
+            border-bottom-color: var(--primary-color);
+          }
+          --paper-input-container-input-invalid: {
+            border-bottom-color: var(--error-color);
+          }
+          --paper-input-container-label: {
+            top: 12px;
+            left: 8px;
+          }
+          --paper-input-container-label-floating: {
+            z-index: 2;
+            top: 10px;
+            display: flex;
+            background:white;
+            width:auto;
+          }
+          --paper-input-container-underline: {
+            display: none;
+          }
+          --paper-input-container-underline-focus: {
+            display: none;
+          }
+        }
       </style>
 
       <h1>Form Layout</h1>
+
+      <div class="container3">
+          <paper-input class="oe-custom" label="Solution" value="All" invalid error-message="In error"></paper-input>
+          <paper-input class="oe-custom" label="Solution" value="All"></paper-input>
+          <paper-input class="oe-custom" label="Solution" value="All"></paper-input>
+      </div>
+        <div style="min-heght:16px">
+        </div>
       <div class="container">
         <paper-input class="custom" always-float-label label="Name" value="Praveen"></paper-input>
         <paper-input label="Company" value="Infosys"></paper-input>

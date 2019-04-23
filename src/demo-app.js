@@ -91,7 +91,7 @@ class DemoApp extends PolymerElement {
               </app-toolbar>
             </app-header>
 
-            <vgrid-demo></vgrid-demo>
+           <start-polymer3></start-polymer3>
 
       </app-header-layout>
   </app-drawer-layout>

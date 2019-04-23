@@ -10,10 +10,9 @@ export default class ClickableCellRenderer extends PolymerElement {
 
     agInit(params) {
         this.params = params;
-
         this.cell = {row: params.value, col: params.colDef.headerName};
         this.data = params.data;
-   
+        console.log('agInit', params.data);
     }
 
     click() {

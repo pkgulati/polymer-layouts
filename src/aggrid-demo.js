@@ -48,9 +48,9 @@ class AGGridDemo extends PolymerElement {
     setPassiveTouchGestures(true);
   
     this.columnDefs = [
-        { headerName: "Make", field: "make" },
-        { headerName: "Model", field: "model" },
-        { headerName: "Price", field: "price" },
+        { headerName: "Make", field: "make", sortable: true  },
+        { headerName: "Model", field: "model" , sortable: true },
+        { headerName: "Price", field: "price" , sortable: true , editable:true},
         {
             headerName: "Clickable Component",
             field: "make",
@@ -87,12 +87,13 @@ class AGGridDemo extends PolymerElement {
     return html`
 
       <link rel="stylesheet" href="../../node_modules/ag-grid-community/dist/styles/ag-grid.css">
-      <link rel="stylesheet" href="../../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css">
+      <link rel="stylesheet" href="../../node_modules/ag-grid-community/dist/styles/ag-theme-material.css">
       <h1>Grid Demo</h1>
       <app-toolbar> ddd</app-toolbar>
       <ag-grid-polymer style="width: 100%; height: 350px;"
-                         class="ag-theme-balham"
+                         class="ag-theme-material"
                            rowData="{{rowData}}"
+                           suppressCellSelection
                            columnDefs="{{columnDefs}}"
                            on-first-data-rendered="{{firstDataRendered}}">
       </ag-grid-polymer>

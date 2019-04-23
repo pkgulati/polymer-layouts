@@ -99,14 +99,8 @@ class Form1Demo extends PolymerElement {
       <link rel="stylesheet" href="../../node_modules/ag-grid-community/dist/styles/ag-grid.css">
       <link rel="stylesheet" href="../../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css">
       <h1>Form Layout</h1>
-      <ag-grid-polymer style="width: 100%; height: 350px;"
-                         class="ag-theme-balham"
-                           rowData="{{rowData}}"
-                           columnDefs="{{columnDefs}}"
-                           on-first-data-rendered="{{firstDataRendered}}">
-      </ag-grid-polymer>
 
-      <fields-group>
+      <fields-group type="auto">
           <paper-input label="Name" value="Praveen"></paper-input>
           <paper-input label="Age" value="47"></paper-input>
           <paper-input label="Company" value="Infosys"></paper-input>
