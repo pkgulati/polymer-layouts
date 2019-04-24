@@ -14,6 +14,7 @@ import '@polymer/paper-item/paper-item.js';
 import '@polymer/paper-card/paper-card.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/app-route/app-location.js';
+import '@polymer/iron-flex-layout/iron-flex-layout-classes.js';
 import './aggrid-demo.js';
 // loads lumo theme by default
 // import './vgrid-demo.js';
@@ -141,7 +142,35 @@ class DemoApp extends PolymerElement {
                   <paper-input label="Solution" value="All"></paper-input>
               </fields-group>
               </div>
-              <div>Page 1</div>
+              <div>
+                   <h3>Dummy Flex element to show 2 fields in second row of same width as first 3 in first row</h3>
+                   <div class="layout horizontal justified" >
+                          <div class="flex-1">
+                              <div>Left Section</div>
+                          </div>
+                          <div class="flex-4">
+                            right
+                            </div>
+                    </div>
+                    <div class="layout horizontal justified" >
+                        <div class="flex-2">
+                            <div>Left Section</div>
+                        </div>
+                        <div class="flex-6">
+                            <fields-group type="auto">
+                            <paper-input fld-s label="Currency" value="USD"></paper-input>
+                              <paper-input label="Name" value="Praveen"></paper-input>
+                              <paper-input label="Age" value="47"></paper-input>
+                              <paper-input fld-l label="Company" value="Infosys"></paper-input>
+                              <paper-input label="Product" value="Finacle"></paper-input>
+                              <paper-input label="Qualification" value="B.Tech."></paper-input>
+                           </fields-group>
+                        </div>
+                        <div class="flex-1">
+                        <div>Left Section</div>
+                    </div>
+                    </div>
+              </div>
               <div>Page 2</div>
               <div>Page 3</div>
             </iron-pages>
@@ -157,7 +186,7 @@ class DemoApp extends PolymerElement {
         // If you override the constructor, always call the 
         // superconstructor first.
         super();
-        this.selected = 0;
+        this.selected = 1;
       }
 
       static get properties () {

@@ -17,23 +17,32 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
           padding-left:8px;
           padding-right:8px;
           align-items: center;
-          justify-content: center;
           align-content: center;
         }
 
         :host ::slotted(*) {
-            min-width: 250px;
-            max-width: 500px;
-            flex-basis: auto; /* default value */
+            flex-basis: 300px; /* default value */
             flex-grow: 1;
             margin-left:8px;
             margin-right:8px  
         }
 
+        :host ::slotted([fld-s]) {
+          flex-basis: 100px; /* default value */
+          flex-grow: 1;
+          margin-left:8px;
+          margin-right:8px  
+      }
+
+      :host ::slotted([fld-l]) {
+        flex-basis: 500px; /* default value */
+        flex-grow: 1;
+        margin-left:8px;
+        margin-right:8px  
+    }
+
         @media (max-width:700px) {
             :host ::slotted(*) {
-                min-width: 250px;
-                max-width: 600px;
                 flex-basis: auto; /* default value */
                 flex-grow: 1;
                 margin-left:8px;
