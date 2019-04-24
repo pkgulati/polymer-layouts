@@ -161,6 +161,8 @@ class DemoApp extends PolymerElement {
                             <paper-input fld-s label="Currency" value="USD"></paper-input>
                               <paper-input label="Name" value="Praveen"></paper-input>
                               <paper-input label="Age" value="47"></paper-input>
+                              <paper-input label="Product" value="Finacle"></paper-input>
+                              <paper-input label="Qualification" value="B.Tech."></paper-input>
                               <paper-input fld-l label="Company" value="Infosys"></paper-input>
                               <paper-input label="Product" value="Finacle"></paper-input>
                               <paper-input label="Qualification" value="B.Tech."></paper-input>

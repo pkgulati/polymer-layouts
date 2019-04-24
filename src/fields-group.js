@@ -21,7 +21,7 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
         }
 
         :host ::slotted(*) {
-            flex-basis: 300px; /* default value */
+            flex-basis: 400px; /* default value */
             flex-grow: 1;
             margin-left:8px;
             margin-right:8px  
@@ -32,25 +32,36 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
           flex-grow: 1;
           margin-left:8px;
           margin-right:8px  
-      }
+        }
 
-      :host ::slotted([fld-l]) {
-        flex-basis: 500px; /* default value */
-        flex-grow: 1;
-        margin-left:8px;
-        margin-right:8px  
-    }
+        :host ::slotted([fld-l]) {
+            flex-basis: 600px; /* default value */
+            flex-grow: 1;
+            margin-left:8px;
+            margin-right:8px  
+        }
+
+        :host([display~=large])  {
+          border : 1px solid green;
+        }
+
+        :host([display~=medium]) {
+          border : 1px solid red;
+        }
 
         @media (max-width:700px) {
-            :host ::slotted(*) {
-                flex-basis: auto; /* default value */
-                flex-grow: 1;
-                margin-left:8px;
-                margin-right:8px 
-                align-items: center;
-                align-content: center;
-                justify-content: center;
-            } 
+          :host {
+            
+          }
+          :host ::slotted(*) {
+            flex-basis: 200px;
+          }
+          :host ::slotted([fld-s]) {
+            flex-basis: 100px;
+          }
+          :host ::slotted([fld-l]) {
+            flex-basis: 500px;
+          }
         }
           
       </style>
@@ -60,9 +71,18 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
 
   static get properties() {
     return {
+      display : {
+        type : String,
+        reflectToAttribute: true
+      },
       width: Number,
       height: Number,
     }
+  }
+
+  constructor() {
+    super();
+    this.display = "large";
   }
 
   connectedCallback() {
@@ -88,6 +108,15 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
   onIronResize() {
     this.width = this.offsetWidth;
     this.height = this.offsetHeight;
+    if (this.width < 700) {
+        if (this.display == 'large') {
+          this.set('display', 'medium');
+        }
+    } else {
+      if (this.display == 'medium') {
+        this.set('display', 'large');
+      }
+    }
   }
 
 
