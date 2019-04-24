@@ -16,6 +16,9 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
           flex-flow: row wrap;
           padding-left:8px;
           padding-right:8px;
+          align-items: center;
+          justify-content: center;
+          align-content: center;
         }
 
         :host ::slotted(*) {
@@ -25,8 +28,6 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
             flex-grow: 1;
             margin-left:8px;
             margin-right:8px  
-            align-items: center;
-            justify-content: center;
         }
 
         @media (max-width:700px) {
@@ -38,6 +39,7 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
                 margin-left:8px;
                 margin-right:8px 
                 align-items: center;
+                align-content: center;
                 justify-content: center;
             } 
         }

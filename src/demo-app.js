@@ -15,7 +15,8 @@ import '@polymer/paper-card/paper-card.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/app-route/app-location.js';
 import './aggrid-demo.js';
-import './vgrid-demo.js';
+// loads lumo theme by default
+// import './vgrid-demo.js';
 
 import '@polymer/paper-tabs/paper-tabs.js';
 import '@polymer/paper-tabs/paper-tab.js';
@@ -42,7 +43,6 @@ class DemoApp extends PolymerElement {
           :root {
             --accent-color:#4285f4;
             --light-primary-color: #4285f4;
-            --paper-tab-ink: #8c9eff;
           }
 
           app-toolbar {
@@ -51,6 +51,9 @@ class DemoApp extends PolymerElement {
               height: 64px;
           }
 
+          body {
+            background-color:#e5e5e5;
+          }
           app-header paper-icon-button {
             --paper-icon-button-ink-color: white;
           }
@@ -61,18 +64,14 @@ class DemoApp extends PolymerElement {
 
           .container  {
             padding:16px;
-            
           }
     
           paper-tabs {
-              --paper-tab-ink:#8c9eff;
+            color: blue;
+            --paper-tabs-selection-bar-color: blue;
+            background-color:#ffffff;
           }
-          paper-tab {
-            --paper-tab-ink:#8c9eff;
-          }
-          :root {
-            --paper-tab-ink:#8c9eff;
-          }
+       
 
         </style>
 
@@ -114,7 +113,7 @@ class DemoApp extends PolymerElement {
               </app-toolbar>
             </app-header>
 
-            <paper-tabs selected="{{selected}}" scrollable>
+          <paper-tabs selected="{{selected}}" scrollable>
             <paper-tab>Tab 0</paper-tab>
             <paper-tab>Tab 1</paper-tab>
             <paper-tab>Tab 2</paper-tab>
@@ -124,6 +123,7 @@ class DemoApp extends PolymerElement {
           <div class="container">
             <iron-pages selected="{{selected}}">
               <div>
+              <h3>All controls are vertically centered </h3>
               <fields-group type="auto">
                   <paper-input label="Name" value="Praveen"></paper-input>
                   <paper-input label="Age" value="47"></paper-input>
