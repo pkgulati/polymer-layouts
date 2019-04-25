@@ -24,6 +24,10 @@ import '@polymer/paper-tabs/paper-tab.js';
 import '@polymer/iron-pages/iron-pages.js';
 import '@polymer/paper-input/paper-input.js';
 import './fields-group.js';
+import '@polymer/paper-dropdown-menu/paper-dropdown-menu.js';
+import '@polymer/paper-item/paper-item.js';
+import '@polymer/paper-listbox/paper-listbox.js';
+import './fields-row.js';
 
 class DemoApp extends PolymerElement {
  
@@ -121,7 +125,7 @@ class DemoApp extends PolymerElement {
             <paper-tab>Tab 3</paper-tab>
           </paper-tabs>
           
-          <div class="container">
+          <div class="container" id="cont1">
             <iron-pages selected="{{selected}}">
               <div>
               <h3>All controls are vertically centered </h3>
@@ -156,25 +160,137 @@ class DemoApp extends PolymerElement {
                         <div class="flex-2">
                             <div>Left Section</div>
                         </div>
-                        <div class="flex-6">
+                        <div class="flex-6" >
+                          <div class="">
                             <fields-group type="auto">
-                            <paper-input fld-s label="Currency" value="USD"></paper-input>
-                              <paper-input label="Name" value="Praveen"></paper-input>
-                              <paper-input label="Age" value="47"></paper-input>
-                              <paper-input label="Product" value="Finacle"></paper-input>
-                              <paper-input label="Qualification" value="B.Tech."></paper-input>
-                              <paper-input fld-l label="Company" value="Infosys"></paper-input>
-                              <paper-input label="Product" value="Finacle"></paper-input>
-                              <paper-input label="Qualification" value="B.Tech."></paper-input>
+                              <paper-input fld-m label="Name" value="Praveen"></paper-input>
+                              <paper-input fld-l label="Description" value="Praveen"></paper-input>
+                            </fields-group>
+
+                            <fields-group type="auto">
+                                <fields-row type="auto">
+                                  <paper-input fld-xs label="Currency" value="USD"></paper-input>
+                                  <paper-input fld-amt label="Amount" value="2000"></paper-input>
+                                </fields-row>
+                                
+                                <fields-row type="auto">
+                                  <paper-input fld-amt label="Start Date" value="2000"></paper-input>
+                                  <paper-input fld-amt label="End Date" value="2000"></paper-input>
+                                </fields-row>
+                            </fields-group>
+
+                            <fields-group type="auto">
+                            <paper-input fld-xs label="Currency" value="USD"></paper-input>
+                            <paper-input fld-l label="Amount" value="2000"></paper-input>
+                            <paper-input fld-xl label="Description" value="2000"></paper-input>
+                          </fields-group>
+
+                            <fields-group type="auto">
+                              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+                              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+                              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+                              <paper-dropdown-menu fld-m label="Dinosaurs">
+                                <paper-listbox slot="dropdown-content" selected="1">
+                                  <paper-item>allosaurus</paper-item>
+                                  <paper-item>brontosaurus</paper-item>
+                                  <paper-item>carcharodontosaurus</paper-item>
+                                  <paper-item>diplodocus</paper-item>
+                                </paper-listbox>
+                              </paper-dropdown-menu>
+                              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+                              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
                            </fields-group>
+                           </div>
                         </div>
                         <div class="flex-1">
-                        <div>Left Section</div>
+                        <div>Side Section</div>
                     </div>
                     </div>
               </div>
-              <div>Page 2</div>
-              <div>Page 3</div>
+              <div>
+              <paper-dropdown-menu label="Dinosaurs">
+              <paper-listbox slot="dropdown-content" selected="1" close-on-activate>
+                <paper-item>allosaurus</paper-item>
+                <paper-item>brontosaurus</paper-item>
+                <paper-item>carcharodontosaurus</paper-item>
+                <paper-item>diplodocus</paper-item>
+              </paper-listbox>
+            </paper-dropdown-menu>
+              </div>
+              <div id="tab3">
+              
+              <div class="layout vertical" >
+
+              <div class="flex-1">
+                  <paper-tabs  selected="{{sel2}}" scrollable>
+                      <paper-tab>Section1</paper-tab>
+                      <paper-tab>Section2</paper-tab>
+                      <paper-tab>Section 3</paper-tab>
+                  </paper-tabs>
+              </div>
+              <div class="flex-4">
+
+              <fields-group type="auto">
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <h4>xzdasdasd</h4>
+              <div id="div2">aaa </div>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+              <paper-input fld-m label="Product" value="Finacle"></paper-input>
+              <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
+              <paper-input fld-m label="Company" value="Infosys"></paper-input>
+           
+              </fields-group>
+
+
+              </div>
+
+              </div>
             </iron-pages>
           </div>
 
@@ -191,13 +307,42 @@ class DemoApp extends PolymerElement {
         this.selected = 1;
       }
 
+      handleScroll() {
+        console.log('handleScroll');
+      }
+
+      ready() {
+        super.ready();
+        console.log('add scroll listener')
+        this.addEventListener('scroll', this.handleScroll);
+        this.$.cont1.addEventListener('scroll', this.handleScroll);
+       }
+
       static get properties () {
         return {
           selected: {
             type: Number,
             value: 0
+          }, 
+          sel2 : {
+            type: Number,
+            value: 0,
+            observer : 'sel2change'
           }
         }
+      }
+
+      sel2change(newval, oldval) {
+          console.log('sel2change', newval, oldval);
+         
+          console.log('this.$.div2.offsetTop ', this.$.div2.getBoundingClientRect());
+          console.log('this.$.div2.offsetHeight ', this.$.div2.offsetHeight);
+          
+          this.$.div2.scrollIntoView();
+          console.log('this.$.div2.offsetTop ', this.$.div2.getBoundingClientRect());
+          console.log('this.$.div2.offsetHeight ', this.$.div2.offsetHeight);
+          
+
       }
 }
 

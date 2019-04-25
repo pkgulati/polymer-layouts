@@ -7,6 +7,7 @@ This repository is just to create some Layout Examples for Polymer 3.0. For Exam
 ## Material design
 https://material.io/design/components/text-fields.html#filled-text-field
 
+
 ## Links
 
 the "cleanest" way that doesn't use :first-child/:last-child and works without any modification on flex-wrap:wrap is to set padding:5px on the container and margin:5px on the children. That will produce a 10px gap between each children and between each children and their parent.
@@ -49,4 +50,49 @@ https://codepen.io/anastasef/pen/RPmKQE
 }
 
 https://github.com/marmelab/admin-on-rest/blob/master/docs/Tutorial.md
+
+## App tool bar search and toggle between article and media
+
+https://www.britannica.com/topic/freezing-food-preservation
+
+## GOOGLE INTERPRETS MATERIAL IN MANY WAYS
+http://commadot.com/google-interprets-material-in-many-ways/
+
+## Tool bar and dialogue clash
+https://www.captaincodeman.com/2017/09/08/beyond-the-polymer-starter-kit-dialogs-and-toolbars
+
+
+characters
+28            257
+
+
+Currency  100
+Amount    200
+Date      200     
+Name      300
+
+
+Pixels    characters
+200       21
+100       10
+
+size      Avergae         Min       Max
+fld-xs    100             100       150        
+fld-s     200             200       300
+fld-m     300             250       400       
+fld-l     400 / 450       300       600 
+fld-xl    600 / 800       500       1000
+
+
+
+
+fld-s
+fld-m
+fld-n
+fld-l
+fld-xl
+
+### Scroll
+
+https://stackoverflow.com/questions/42658413/polymer-event-on-content-scroll-not-firing
 

@@ -3,25 +3,23 @@ import {mixinBehaviors} from '@polymer/polymer/lib/legacy/class.js';
 import {IronResizableBehavior} from '@polymer/iron-resizable-behavior/iron-resizable-behavior.js';
 import {FlattenedNodesObserver} from '@polymer/polymer/lib/utils/flattened-nodes-observer.js';
 
-class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement) {
+class FieldsRow extends mixinBehaviors([IronResizableBehavior], PolymerElement) {
   static get template() {
     return html`
       <style>
       
         :host {
-          width:100%;
           min-height:16px;
           position: relative;
           display: flex;
-          flex-flow: row wrap;
+          flex-flow: row;
           box-sizing:border-box;
-          justify-content:space-around;
-          margin-right:16px;
         }
 
         :host ::slotted(*) {
             flex-basis: 300px; /* default value */
             flex-grow: 1;
+            max-width:400px;
         }
 
         :host ::slotted([fld-xs]) {
@@ -64,14 +62,6 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
           max-width:600px;
         }
 
-        :host > fields-row {
-            flex-basis: 300px;
-            min-width : 220px;
-            max-width:600px;
-            flex-grow: 1;
-            margin-left:8px;
-            margin-right:8px;
-        }
 
       </style>
       <slot></slot>
@@ -106,4 +96,4 @@ class FieldsGroup extends mixinBehaviors([IronResizableBehavior], PolymerElement
 
 
 }
-customElements.define('fields-group', FieldsGroup);
+customElements.define('fields-row', FieldsRow);
