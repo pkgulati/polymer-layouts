@@ -84,16 +84,16 @@ Polymer({
         border-right: 1px solid rgba(10, 11, 49, 0.20);
       }
 
-      :host ::slotted(paper-tab)  {
+      :host ::slotted(paper-item)  {
         width: 100%;
         height: 35px;
         line-height: 35px;
         box-sizing: border-box;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         text-align: left;
     }
 
-    :host ::slotted([iron-selected])  {
+    :host ::slotted(.iron-selected)  {
         border-right: 2px solid #ED462F;
     }
     </style>

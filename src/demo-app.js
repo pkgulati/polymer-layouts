@@ -89,6 +89,9 @@ class DemoApp extends PolymerElement {
             cursor: pointer;
           }
 
+          .l1 {
+            width : 30%;
+          }
 
         </style>
 
@@ -129,6 +132,15 @@ class DemoApp extends PolymerElement {
                 <div main-title>Inbox</div>
               </app-toolbar>
             </app-header>
+
+            <div class="l1">
+            <vertical-tabs>
+              <paper-item>Inbox</paper-item>
+              <paper-item>Starred</paper-item>
+              <paper-item>Sent mail</paper-item>
+              <paper-item>Drafts</paper-item>
+            </vertical-tabs>
+            <div>
 
           <paper-tabs selected="{{selected}}" scrollable>
             <paper-tab>Tab 0</paper-tab>
@@ -231,14 +243,20 @@ class DemoApp extends PolymerElement {
               </div>
               <div id="tab3">
               
+           
+
               <div class="layout horizontal" >
 
+             
+
               <div class="flex-3">
-                  <vertical-tabs role="listbox" selected="{{sel2}}" >
-                      <paper-tab role="option">Section1</paper-tab>
-                      <paper-tab role="option">Section2</paper-tab>
-                      <paper-tab role="option">Section 3</paper-tab>
-                  </vertical-tabs>
+              <vertical-tabs>
+              <paper-item>Inbox</paper-item>
+              <paper-item>Starred</paper-item>
+              <paper-item>Sent mail</paper-item>
+              <paper-item>Drafts</paper-item>
+            </vertical-tabs>
+
               </div>
               <div class="flex-4">
 
