@@ -96,3 +96,39 @@ fld-xl
 
 https://stackoverflow.com/questions/42658413/polymer-event-on-content-scroll-not-firing
 
+## Throttle
+
+https://github.com/StartPolymer/s-utils
+
+
+## Future
+https://github.com/Polymer/polymer/issues/5240
+
+https://github.com/material-components/material-components-web-components
+
+## Menu Aligned
+https://github.com/danleyb2/paper-dropdown-menu-aligned
+
+
+## Fixes styling (e.g. shadow, elevation) issues in Edge 40 
+https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11495448/
+
+paper-item:focus,
+paper-icon-item:focus {
+  position: relative;
+  opacity: 1.0;
+  background-color: var(--paper-grey-500);
+}
+
+
+https://stackoverflow.com/questions/33890399/angular-material-mdtabs-is-it-possible-to-have-vertical-tabs/43389018#43389018
+
+## CSS not selected
+
+:host(:not(.iron-selected)) > .tab-content {
+        opacity: 0.8;
+        @apply --paper-tab-content-unselected;
+}
+
+https://github.com/PolymerElements/paper-tabs/issues/178
+

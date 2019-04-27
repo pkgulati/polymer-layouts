@@ -28,6 +28,7 @@ import '@polymer/paper-dropdown-menu/paper-dropdown-menu.js';
 import '@polymer/paper-item/paper-item.js';
 import '@polymer/paper-listbox/paper-listbox.js';
 import './fields-row.js';
+import './vertical-tabs.js';
 
 class DemoApp extends PolymerElement {
  
@@ -77,6 +78,17 @@ class DemoApp extends PolymerElement {
             background-color:#ffffff;
           }
        
+          vertical-tabs {
+            border: 1px dotted #ccc;
+            color: blue;
+            --paper-tabs-selection-bar-color: blue;
+            background-color:#ffffff;
+          }
+
+          paper-item {
+            cursor: pointer;
+          }
+
 
         </style>
 
@@ -219,14 +231,14 @@ class DemoApp extends PolymerElement {
               </div>
               <div id="tab3">
               
-              <div class="layout vertical" >
+              <div class="layout horizontal" >
 
-              <div class="flex-1">
-                  <paper-tabs  selected="{{sel2}}" scrollable>
-                      <paper-tab>Section1</paper-tab>
-                      <paper-tab>Section2</paper-tab>
-                      <paper-tab>Section 3</paper-tab>
-                  </paper-tabs>
+              <div class="flex-3">
+                  <vertical-tabs role="listbox" selected="{{sel2}}" >
+                      <paper-tab role="option">Section1</paper-tab>
+                      <paper-tab role="option">Section2</paper-tab>
+                      <paper-tab role="option">Section 3</paper-tab>
+                  </vertical-tabs>
               </div>
               <div class="flex-4">
 
@@ -304,7 +316,7 @@ class DemoApp extends PolymerElement {
         // If you override the constructor, always call the 
         // superconstructor first.
         super();
-        this.selected = 1;
+        this.selected = 3;
       }
 
       handleScroll() {
@@ -322,7 +334,7 @@ class DemoApp extends PolymerElement {
         return {
           selected: {
             type: Number,
-            value: 0
+            value: 3
           }, 
           sel2 : {
             type: Number,
@@ -333,6 +345,7 @@ class DemoApp extends PolymerElement {
       }
 
       sel2change(newval, oldval) {
+          return;
           console.log('sel2change', newval, oldval);
          
           console.log('this.$.div2.offsetTop ', this.$.div2.getBoundingClientRect());
