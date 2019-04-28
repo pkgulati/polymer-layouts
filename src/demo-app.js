@@ -93,7 +93,6 @@ class DemoApp extends PolymerElement {
 
           .verticaltabdemo {
             height : 400px;
-            border : 1px solid green;
           }
 
         </style>
@@ -301,9 +300,11 @@ class DemoApp extends PolymerElement {
               </div>
 
               <div class="verticaltabdemo layout horizontal">
-                  <vertical-tabs class="flex-1">
+                  <vertical-tabs>
                     <vertical-tab>Inbox</vertical-tab>
                     <vertical-tab>Starred</vertical-tab>
+                    <vertical-tab>Sent Items</vertical-tab>
+                    <vertical-tab>Official</vertical-tab>
                   </vertical-tabs>
                   <div class="flex-4" style="padding:16px;">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida in fermentum et sollicitudin. Urna nec tincidunt praesent semper. Massa enim nec dui nunc mattis enim ut tellus. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Potenti nullam ac tortor vitae purus faucibus ornare. Nulla at volutpat diam ut. Libero volutpat sed cras ornare arcu dui vivamus arcu. Nullam non nisi est sit amet facilisis magna. Sit amet luctus venenatis lectus magna fringilla urna.

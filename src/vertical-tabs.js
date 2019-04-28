@@ -77,7 +77,6 @@ Polymer({
         -webkit-align-items: center;
         align-items: center;
         height: 100%;
-        width: 100%;
         font-size: 14px;
         font-weight: 500;
         overflow: hidden;
@@ -89,7 +88,8 @@ Polymer({
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        border: 1px solid rgba(10, 11, 49, 0.20);
+        border-right: 1px solid rgba(10, 11, 49, 0.20);
+        min-width:120px;
       }
 
       :host ::slotted(.iron-selected)  {

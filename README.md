@@ -132,3 +132,6 @@ https://stackoverflow.com/questions/33890399/angular-material-mdtabs-is-it-possi
 
 https://github.com/PolymerElements/paper-tabs/issues/178
 
+## Style
+                    font-size  font-weight line-height
+paper-font-subhead  16px        400        24px

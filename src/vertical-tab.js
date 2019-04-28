@@ -48,20 +48,24 @@ Polymer({
   _template: html`
     <style>
       :host {
-        @apply --layout-inline;
-        @apply --layout-start;
-        @apply --layout-flex-auto;
-
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -ms-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
         position: relative;
         padding: 0 12px;
         overflow: hidden;
-        cursor: pointer;
-        vertical-align: middle;
-        box-sizing:border-box;
-        @apply --paper-font-common-base;
-        @apply --paper-tab;
-        width:100%;
-        
+        cursor: default;
+        vertical-align:middle;
+        min-height:36px;
       }
 
       :host(:focus) {
@@ -74,15 +78,16 @@ Polymer({
 
       .tab-content {
         width: 100%;
-        min-height:36px;
         transform: translateZ(0);
           -webkit-transform: translateZ(0);
         transition: opacity 0.1s cubic-bezier(0.4, 0.0, 1, 1);
+        @apply --paper-font-common-base;
+        @apply --paper-font-menu;
       }
 
       :host(:not(.iron-selected)) > .tab-content {
         opacity: 0.8;
-        @apply --paper-tab-content-unselected;
+        @apply --vertical-tab-content-unselected;
       }
 
       :host(.iron-selected) > .tab-content {
@@ -94,8 +99,9 @@ Polymer({
         font-weight: 700;
       }
 
-      paper-ripple {
-        color: var(--primary-color);
+      .tab-content ::slotted(*) {
+        min-height: 80px;
+        border:2px solid red;
       }
 
       /* TODO */
@@ -103,6 +109,7 @@ Polymer({
         @apply --layout-flex-auto;
         height: 100%;
       }
+      
     </style>
 
     <div class="tab-content">
