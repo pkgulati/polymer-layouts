@@ -20,7 +20,9 @@ Polymer({
         padding: 0 16px;
         pointer-events: none;
         font-size: var(--app-toolbar-font-size, 20px);
-        border-bottom : 1px solid rgb(0, 0, 0, var(--light-divider-opacity));
+        padding-top: 8px;
+        padding-bottom: 8px;
+        box-sizing: border-box;
       }
 
       :host ::slotted(*) {
@@ -55,9 +57,21 @@ Polymer({
       :host ::slotted([spacer]) {
         margin-left: 64px;
       }
-    </style>
 
-    <slot></slot>
+      .page-content ::slotted([main-title]) {
+        pointer-events: none;
+        @apply --layout-flex;
+      }
+
+      .footer {
+        margin-left:16px;
+      }
+
+    </style>
+    
+      <slot></slot>
+     
+
 `,
 
   is: 'page-toolbar'

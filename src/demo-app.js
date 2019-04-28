@@ -121,7 +121,15 @@ class DemoApp extends PolymerElement {
           }
 
           .page-content {
-            padding:16px;
+            margin:8px 16px 0px 16px;
+            background-color:#ffffff;
+          }
+
+          .page-divider {
+            margin-left:16px;
+            margin-right:16px;
+            box-sizing: border-box;
+            border-bottom : 1px solid rgb(0, 130, 2, var(--light-divider-opacity));
           }
         </style>
 
@@ -151,6 +159,7 @@ class DemoApp extends PolymerElement {
           <div class="main-content">
               <div class="layout horizontal">
                   <div class="leftmainbox">
+                      LEFT BLACK
                   </div>
                   <div class="flex-9 rightmainbox">
                       <page-toolbar>
@@ -167,7 +176,9 @@ class DemoApp extends PolymerElement {
                               </div>
                           </div>
                       </page-toolbar>
+                      <div class="page-divider"></div>
                       <div class="page-content">
+                            dsdssfdf
                             <div class="layout horizontal">
                             <vertical-tabs class="flex-1">
                                 <vertical-tab>Inbox</vertical-tab>
