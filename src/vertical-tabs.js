@@ -92,14 +92,14 @@ Polymer({
         border: 1px solid rgba(10, 11, 49, 0.20);
       }
 
-        :host ::slotted(.iron-selected)  {
-            border-right: 2px solid #ED462F;
-        }
+      :host ::slotted(.iron-selected)  {
+          border-right: 2px solid var(--primary-color);
+      }
 
-        #tabsContainer {
-            width : 100%;
-            border-right: 1px solid rgba(10, 11, 49, 0.20);
-        }
+      #tabsContainer {
+          width : 100%;
+          border-right: 1px solid rgba(10, 11, 49, 0.20);
+      }
 
     </style>
 
