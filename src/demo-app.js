@@ -116,6 +116,10 @@ class DemoApp extends PolymerElement {
               height: calc(100vh - 64px);
           }
 
+          .dummy1{
+            background-color:yellow;
+          }
+
         </style>
 
         <app-drawer-layout id="drawerLayout" force-narrow>
@@ -169,6 +173,9 @@ class DemoApp extends PolymerElement {
                           </vertical-tabs>
                           <div class="flex-7 form-container">
                               Form Container
+                              <div class="dummy1">
+                              dummy1
+                              </div>
                           </div>
                       </div>
                     </div>
