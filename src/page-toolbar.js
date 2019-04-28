@@ -20,6 +20,7 @@ Polymer({
         padding: 0 16px;
         pointer-events: none;
         font-size: var(--app-toolbar-font-size, 20px);
+        border-bottom : 1px solid rgb(0, 0, 0, var(--light-divider-opacity));
       }
 
       :host ::slotted(*) {

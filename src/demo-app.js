@@ -120,6 +120,9 @@ class DemoApp extends PolymerElement {
             background-color:yellow;
           }
 
+          .page-content {
+            padding:16px;
+          }
         </style>
 
         <app-drawer-layout id="drawerLayout" force-narrow>
@@ -164,20 +167,24 @@ class DemoApp extends PolymerElement {
                               </div>
                           </div>
                       </page-toolbar>
-                      <div class="layout horizontal">
-                          <vertical-tabs class="flex-1">
-                              <vertical-tab>Inbox</vertical-tab>
-                              <vertical-tab>Starred</vertical-tab>
-                              <vertical-tab>Sent Items</vertical-tab>
-                              <vertical-tab>Official</vertical-tab>
-                          </vertical-tabs>
-                          <div class="flex-7 form-container">
-                              Form Container
-                              <div class="dummy1">
-                              dummy1
-                              </div>
-                          </div>
+                      <div class="page-content">
+                            <div class="layout horizontal">
+                            <vertical-tabs class="flex-1">
+                                <vertical-tab>Inbox</vertical-tab>
+                                <vertical-tab>Starred</vertical-tab>
+                                <vertical-tab>Sent Items</vertical-tab>
+                                <vertical-tab>Official</vertical-tab>
+                            </vertical-tabs>
+                            <div class="flex-7 form-container">
+                                Form Container
+                                <div class="dummy1">
+                                dummy1
+                                </div>
+                            </div>
+                        </div>
                       </div>
+
+                     
                     </div>
               </div>
          </div>
