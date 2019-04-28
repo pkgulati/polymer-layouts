@@ -1,12 +1,4 @@
-/**
-@license
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-*/
+
 import '@polymer/polymer/polymer-legacy.js';
 import '@polymer/iron-flex-layout/iron-flex-layout.js';
 
@@ -18,31 +10,10 @@ import {dom} from '@polymer/polymer/lib/legacy/polymer.dom.js';
 import {html} from '@polymer/polymer/lib/utils/html-tag.js';
 
 /*
-`paper-tab` is styled to look like a tab. It should be used in conjunction with
-`paper-tabs`.
-
-Example:
-
-    <paper-tabs selected="0">
-      <paper-tab>TAB 1</paper-tab>
-      <paper-tab>TAB 2</paper-tab>
-      <paper-tab>TAB 3</paper-tab>
-    </paper-tabs>
-
-### Styling
-
-The following custom properties and mixins are available for styling:
-
-Custom property | Description | Default
-----------------|-------------|----------
-`--paper-tab-ink` | Ink color | `--paper-yellow-a100`
-`--paper-tab` | Mixin applied to the tab | `{}`
-`--paper-tab-content` | Mixin applied to the tab content | `{}`
-`--paper-tab-content-unselected` | Mixin applied to the tab content when the tab is not selected | `{}`
-
-This element applies the mixin `--paper-font-common-base` but does not import
-`paper-styles/typography.html`. In order to apply the `Roboto` font to this
-element, make sure you've imported `paper-styles/typography.html`.
+  <vertical-tabs>
+      <vertical-tab>Tab 1</vertical-tab>
+      <vertical-tab>Tab 2</vertical-tab>
+    </vertical-tabs>
 */
 Polymer({
   _template: html`
