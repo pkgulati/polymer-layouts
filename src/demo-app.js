@@ -29,6 +29,7 @@ import '@polymer/paper-item/paper-item.js';
 import '@polymer/paper-listbox/paper-listbox.js';
 import './fields-row.js';
 import './vertical-tabs.js';
+import './vertical-tab.js';
 
 class DemoApp extends PolymerElement {
  
@@ -78,19 +79,21 @@ class DemoApp extends PolymerElement {
             background-color:#ffffff;
           }
        
-          vertical-tabs {
-            border: 1px dotted #ccc;
-            color: blue;
-            --paper-tabs-selection-bar-color: blue;
-            background-color:#ffffff;
-          }
-
+       
           paper-item {
             cursor: pointer;
           }
 
           .l1 {
             width : 30%;
+          }
+
+          .maincontent {
+          }
+
+          .verticaltabdemo {
+            height : 400px;
+            border : 1px solid green;
           }
 
         </style>
@@ -126,31 +129,24 @@ class DemoApp extends PolymerElement {
 
         <app-header-layout>
 
-            <app-header fixed effects="waterfall" slot="header">
-              <app-toolbar>
-                <paper-icon-button id="toggle" icon="menu" on-click="openDrawer"></paper-icon-button>
-                <div main-title>Inbox</div>
-              </app-toolbar>
-            </app-header>
+          <app-header fixed effects="waterfall" slot="header">
+            <app-toolbar>
+              <paper-icon-button id="toggle" icon="menu" on-click="openDrawer"></paper-icon-button>
+              <div main-title>Inbox</div>
+            </app-toolbar>
+          </app-header>
 
-            <div class="l1">
-            <vertical-tabs>
-              <paper-item>Inbox</paper-item>
-              <paper-item>Starred</paper-item>
-              <paper-item>Sent mail</paper-item>
-              <paper-item>Drafts</paper-item>
-            </vertical-tabs>
-            <div>
-
-          <paper-tabs selected="{{selected}}" scrollable>
+             
+          <paper-tabs selected="{{currenttab}}" scrollable>
             <paper-tab>Tab 0</paper-tab>
             <paper-tab>Tab 1</paper-tab>
             <paper-tab>Tab 2</paper-tab>
-            <paper-tab>Tab 3</paper-tab>
+            <paper-tab>Form</paper-tab>
+            <paper-tab>Vertical</paper-tab>
           </paper-tabs>
           
           <div class="container" id="cont1">
-            <iron-pages selected="{{selected}}">
+            <iron-pages selected="{{currenttab}}">
               <div>
               <h3>All controls are vertically centered </h3>
               <fields-group type="auto">
@@ -214,7 +210,7 @@ class DemoApp extends PolymerElement {
                               <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
                               <paper-input fld-m label="Company" value="Infosys"></paper-input>
                               <paper-dropdown-menu fld-m label="Dinosaurs">
-                                <paper-listbox slot="dropdown-content" selected="1">
+                                <paper-listbox slot="dropdown-content" currenttab="1">
                                   <paper-item>allosaurus</paper-item>
                                   <paper-item>brontosaurus</paper-item>
                                   <paper-item>carcharodontosaurus</paper-item>
@@ -233,7 +229,7 @@ class DemoApp extends PolymerElement {
               </div>
               <div>
               <paper-dropdown-menu label="Dinosaurs">
-              <paper-listbox slot="dropdown-content" selected="1" close-on-activate>
+              <paper-listbox slot="dropdown-content" currenttab="1" close-on-activate>
                 <paper-item>allosaurus</paper-item>
                 <paper-item>brontosaurus</paper-item>
                 <paper-item>carcharodontosaurus</paper-item>
@@ -242,24 +238,8 @@ class DemoApp extends PolymerElement {
             </paper-dropdown-menu>
               </div>
               <div id="tab3">
-              
-           
-
-              <div class="layout horizontal" >
-
-             
-
-              <div class="flex-3">
-              <vertical-tabs>
-              <paper-item>Inbox</paper-item>
-              <paper-item>Starred</paper-item>
-              <paper-item>Sent mail</paper-item>
-              <paper-item>Drafts</paper-item>
-            </vertical-tabs>
-
-              </div>
-              <div class="flex-4">
-
+         
+            
               <fields-group type="auto">
               <paper-input fld-m label="Product" value="Finacle"></paper-input>
               <paper-input fld-m label="Qualification" value="B.Tech."></paper-input>
@@ -320,10 +300,26 @@ class DemoApp extends PolymerElement {
 
               </div>
 
+              <div class="verticaltabdemo layout horizontal">
+                  <vertical-tabs class="flex-1">
+                    <vertical-tab>Inbox</vertical-tab>
+                    <vertical-tab>Starred</vertical-tab>
+                  </vertical-tabs>
+                  <div class="flex-4" style="padding:16px;">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida in fermentum et sollicitudin. Urna nec tincidunt praesent semper. Massa enim nec dui nunc mattis enim ut tellus. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Potenti nullam ac tortor vitae purus faucibus ornare. Nulla at volutpat diam ut. Libero volutpat sed cras ornare arcu dui vivamus arcu. Nullam non nisi est sit amet facilisis magna. Sit amet luctus venenatis lectus magna fringilla urna.
+
+                  Dictum at tempor commodo ullamcorper a. Nec ultrices dui sapien eget. Elit sed vulputate mi sit amet mauris commodo quis imperdiet. Id interdum velit laoreet id donec ultrices tincidunt. Fringilla urna porttitor rhoncus dolor purus non enim praesent elementum. Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis. Ullamcorper dignissim cras tincidunt lobortis feugiat. Vel turpis nunc eget lorem dolor. Blandit turpis cursus in hac habitasse platea. Scelerisque fermentum dui faucibus in ornare. Massa eget egestas purus viverra accumsan. Interdum varius sit amet mattis vulputate enim nulla aliquet. Turpis egestas integer eget aliquet. Eget gravida cum sociis natoque penatibus et magnis dis. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum. Eget sit amet tellus cras adipiscing enim eu. Amet cursus sit amet dictum sit amet justo donec enim.
+                  
+                  Ante metus dictum at tempor commodo. Eleifend donec pretium vulputate sapien nec sagittis aliquam. Placerat duis ultricies lacus sed turpis tincidunt id. Id nibh tortor id aliquet lectus proin nibh. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Sagittis id consectetur purus ut faucibus. Lacus viverra vitae congue eu consequat ac felis donec et. Leo urna molestie at elementum eu facilisis. Varius sit amet mattis vulputate enim. Ut eu sem integer vitae justo. Quam adipiscing vitae proin sagittis nisl. Odio pellentesque diam volutpat commodo sed egestas egestas. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Nunc congue nisi vitae suscipit tellus mauris a. Adipiscing elit pellentesque habitant morbi. Mi in nulla posuere sollicitudin aliquam ultrices. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel.
+                  
+                  Interdum consectetur libero id faucibus nisl tincidunt eget. Pharetra vel turpis nunc eget. Mauris sit amet massa vitae tortor condimentum lacinia quis. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et. In dictum non consectetur a erat nam at lectus. At volutpat diam ut venenatis tellus in metus vulputate eu. Fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque. Quam vulputate dignissim suspendisse in est. Dolor sit amet consectetur adipiscing elit pellentesque habitant. Erat imperdiet sed euismod nisi porta lorem mollis aliquam ut. Augue mauris augue neque gravida in fermentum et sollicitudin ac. Vehicula ipsum a arcu cursus vitae. Metus dictum at tempor commodo. Ut diam quam nulla porttitor massa id. Sed turpis tincidunt id aliquet. Magna etiam tempor orci eu lobortis. Diam vulputate ut pharetra sit.
+                  
+                  Turpis tincidunt id aliquet risus feugiat. Justo laoreet sit amet cursus. Nunc faucibus a pellentesque sit amet porttitor eget dolor morbi. Odio ut sem nulla pharetra. Tincidunt ornare massa eget egestas purus viverra accumsan in. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Imperdiet proin fermentum leo vel orci porta non pulvinar neque. Non enim praesent elementum facilisis leo. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Vel eros donec ac odio. Pharetra pharetra massa massa ultricies mi quis hendrerit. Diam maecenas ultricies mi eget mauris pharetra.
+                </div>
               </div>
             </iron-pages>
           </div>
-
+         
       </app-header-layout>
   </app-drawer-layout>
 
@@ -334,7 +330,7 @@ class DemoApp extends PolymerElement {
         // If you override the constructor, always call the 
         // superconstructor first.
         super();
-        this.selected = 3;
+        this.currenttab = 4;
       }
 
       handleScroll() {
@@ -350,7 +346,7 @@ class DemoApp extends PolymerElement {
 
       static get properties () {
         return {
-          selected: {
+          currenttab: {
             type: Number,
             value: 3
           }, 

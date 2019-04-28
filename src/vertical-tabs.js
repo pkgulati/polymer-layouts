@@ -70,35 +70,42 @@ Polymer({
   _template: html`
     <style>
       :host {
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
-        padding: 8px 0;
-        background: var(--paper-listbox-background-color, var(--primary-background-color));
-        color: var(--paper-listbox-color, var(--primary-text-color));
-        @apply --paper-listbox;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 500;
+        overflow: hidden;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-bottom: 35px;
-        height: inherit;
-        border-bottom: none;
-        border-right: 1px solid rgba(10, 11, 49, 0.20);
+        border: 1px solid rgba(10, 11, 49, 0.20);
       }
 
-      :host ::slotted(paper-item)  {
-        width: 100%;
-        height: 35px;
-        line-height: 35px;
-        box-sizing: border-box;
-        letter-spacing: 1px;
-        text-align: left;
-    }
+        :host ::slotted(.iron-selected)  {
+            border-right: 2px solid #ED462F;
+        }
 
-    :host ::slotted(.iron-selected)  {
-        border-right: 2px solid #ED462F;
-    }
+        #tabsContainer {
+            width : 100%;
+            border-right: 1px solid rgba(10, 11, 49, 0.20);
+        }
+
     </style>
 
-    <slot></slot>
+    <div id="tabsContainer" class="flex">
+            <slot></slot>
+    </div>
 `,
 
   is: 'vertical-tabs',
