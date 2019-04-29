@@ -116,21 +116,21 @@ class DemoApp extends PolymerElement {
           .rightmainbox {
               height: calc(100vh - 64px);
               margin:0px 16px 0px 16px;
-              border : 1px solid green;
           }
 
           .dummy1{
-            background-color:yellow;
           }
 
           .page-content {
             background-color:#ffffff;
-            border : 1px solid red;
           }
 
           .page-divider {
             box-sizing: border-box;
             border-bottom : 1px solid rgb(0, 130, 2, var(--light-divider-opacity));
+          }
+          .form-container {
+            padding-left : 16px;
           }
         </style>
 
@@ -188,10 +188,10 @@ class DemoApp extends PolymerElement {
                                 <vertical-tab>Official</vertical-tab>
                             </vertical-tabs>
                             <div class="flex-7 form-container">
-                                Form Container
-                                <div class="dummy1">
-                                dummy1
-                                </div>
+                                <fields-group type="auto">
+                                   <paper-input fld-m label="Name"></paper-input>
+                                  <paper-input fld-m label="Description"></paper-input>
+                                </fields-group>
                             </div>
                         </div>
                       </div>
