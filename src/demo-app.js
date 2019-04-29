@@ -179,7 +179,7 @@ class DemoApp extends PolymerElement {
                       </page-toolbar>
                       <div class="page-divider"></div>
                       <div class="page-content">
-                            <content-header></content-header>
+                            <content-header>XYZ Bank</content-header>
                             <div class="layout horizontal">
                             <vertical-tabs class="flex-1">
                                 <vertical-tab>Inbox</vertical-tab>
