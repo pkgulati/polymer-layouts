@@ -32,6 +32,7 @@ import './vertical-tabs.js';
 import './vertical-tab.js';
 import './form2-demo.js';
 import './page-toolbar.js';
+import './content-header.js';
 
 class DemoApp extends PolymerElement {
  
@@ -114,6 +115,8 @@ class DemoApp extends PolymerElement {
   
           .rightmainbox {
               height: calc(100vh - 64px);
+              margin:0px 16px 0px 16px;
+              border : 1px solid green;
           }
 
           .dummy1{
@@ -121,13 +124,11 @@ class DemoApp extends PolymerElement {
           }
 
           .page-content {
-            margin:8px 16px 0px 16px;
             background-color:#ffffff;
+            border : 1px solid red;
           }
 
           .page-divider {
-            margin-left:16px;
-            margin-right:16px;
             box-sizing: border-box;
             border-bottom : 1px solid rgb(0, 130, 2, var(--light-divider-opacity));
           }
@@ -178,7 +179,7 @@ class DemoApp extends PolymerElement {
                       </page-toolbar>
                       <div class="page-divider"></div>
                       <div class="page-content">
-                            dsdssfdf
+                            <content-header></content-header>
                             <div class="layout horizontal">
                             <vertical-tabs class="flex-1">
                                 <vertical-tab>Inbox</vertical-tab>
