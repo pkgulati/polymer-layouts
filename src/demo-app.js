@@ -126,7 +126,7 @@ class DemoApp extends PolymerElement {
           }
           .page-content {
             background-color:#ffffff;
-            height: calc(100vh - 128px);
+            height: calc(100vh - 200px);
           }
 
           .page-divider {
