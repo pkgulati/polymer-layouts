@@ -121,6 +121,9 @@ class DemoApp extends PolymerElement {
           .dummy1{
           }
 
+          .fullheight {
+            height:100%;
+          }
           .page-content {
             background-color:#ffffff;
             height: calc(100vh - 128px);
@@ -181,19 +184,19 @@ class DemoApp extends PolymerElement {
                       <div class="page-divider"></div>
                       <div class="page-content">
                             <content-header>XYZ Bank</content-header>
-                            <div class="layout horizontal">
-                            <vertical-tabs class="flex-1">
-                                <vertical-tab>Inbox</vertical-tab>
-                                <vertical-tab>Starred</vertical-tab>
-                                <vertical-tab>Sent Items</vertical-tab>
-                                <vertical-tab>Official</vertical-tab>
-                            </vertical-tabs>
-                            <div class="flex-7 form-container">
-                                <fields-group type="auto">
-                                   <paper-input fld-m label="Name"></paper-input>
-                                  <paper-input fld-m label="Description"></paper-input>
-                                </fields-group>
-                            </div>
+                            <div class="layout horizontal fullheight">
+                                <vertical-tabs class="flex-1">
+                                    <vertical-tab>Inbox</vertical-tab>
+                                    <vertical-tab>Starred</vertical-tab>
+                                    <vertical-tab>Sent Items</vertical-tab>
+                                    <vertical-tab>Official</vertical-tab>
+                                </vertical-tabs>
+                                <div class="flex-7 form-container">
+                                    <fields-group type="auto">
+                                      <paper-input fld-m label="Name"></paper-input>
+                                      <paper-input fld-m label="Description"></paper-input>
+                                    </fields-group>
+                                </div>
                         </div>
                       </div>
 
