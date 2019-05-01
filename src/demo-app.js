@@ -33,6 +33,7 @@ import './vertical-tab.js';
 import './form2-demo.js';
 import './page-toolbar.js';
 import './content-header.js';
+import './fields-sub-header.js';
 
 class DemoApp extends PolymerElement {
  
@@ -116,17 +117,18 @@ class DemoApp extends PolymerElement {
           .rightmainbox {
               height: calc(100vh - 64px);
               margin:0px 16px 0px 16px;
+              overflow-y: hidden;
           }
 
           .dummy1{
           }
 
           .fullheight {
-            height:100%;
+            height: calc(100vh - 192px);
           }
           .page-content {
             background-color:#ffffff;
-            height: calc(100vh - 200px);
+            height: calc(100vh - 128px);
           }
 
           .page-divider {
@@ -135,7 +137,22 @@ class DemoApp extends PolymerElement {
           }
           .form-container {
             padding-left : 16px;
+            height:100%;
           }
+
+          .scrollable{
+            position:fixed;
+            overflow-y:scroll;
+          }
+          fields-group {
+            max-width : 800px;
+            margin:auto;
+          }
+
+          .scroll-content {
+            
+          }
+
         </style>
 
         <app-drawer-layout id="drawerLayout" force-narrow>
@@ -184,18 +201,51 @@ class DemoApp extends PolymerElement {
                       <div class="page-divider"></div>
                       <div class="page-content">
                             <content-header>XYZ Bank</content-header>
-                            <div class="layout horizontal fullheight">
+                            <div class="layout horizontal ">
                                 <vertical-tabs class="flex-1">
-                                    <vertical-tab>Inbox</vertical-tab>
-                                    <vertical-tab>Starred</vertical-tab>
-                                    <vertical-tab>Sent Items</vertical-tab>
-                                    <vertical-tab>Official</vertical-tab>
+                                    <vertical-tab>General</vertical-tab>
+                                    <vertical-tab>Details</vertical-tab>
+                                    <vertical-tab>Additional</vertical-tab>
                                 </vertical-tabs>
                                 <div class="flex-7 form-container">
+                                  <div class="scrollable">
+                                    <fields-sub-header>
+                                        General
+                                    </fields-sub-header>
                                     <fields-group type="auto">
                                       <paper-input fld-m label="Name"></paper-input>
                                       <paper-input fld-m label="Description"></paper-input>
+                                      <paper-input fld-m label="Age"></paper-input>
+                                      <paper-input fld-m label="Sex"></paper-input>
+                                      <paper-input fld-m label="Department"></paper-input>
+                                      <paper-input fld-m label="Organisation"></paper-input>
+                                      <paper-input fld-m label="City"></paper-input>
+                                      <paper-input fld-m label="Country"></paper-input>
+                                      <paper-input fld-m label="State"></paper-input>
+                                      <paper-input fld-l label="Purpose"></paper-input>
+                                      <paper-input fld-l label="Remarks"></paper-input>
                                     </fields-group>
+                                    <fields-sub-header>
+                                    Details
+                                    </fields-sub-header>
+                                    <fields-group type="auto">
+                                    <paper-input fld-m label="Name"></paper-input>
+                                    <paper-input fld-m label="Description"></paper-input>
+                                    <paper-input fld-m label="Age"></paper-input>
+                                    <paper-input fld-m label="Sex"></paper-input>
+                                    </fields-group>
+
+                                    <fields-sub-header>
+                                    Additional
+                                    </fields-sub-header>
+
+                                    <fields-group type="auto">
+                                    <paper-input fld-m label="Free Field1"></paper-input>
+                                    <paper-input fld-m label="Free Field2"></paper-input>
+                                    <paper-input fld-m label="Free Field3"></paper-input>
+                                    <paper-input fld-m label="Free Field4"></paper-input>
+                                    </fields-group>
+                                </div>
                                 </div>
                         </div>
                       </div>
