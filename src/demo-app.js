@@ -153,6 +153,40 @@ class DemoApp extends PolymerElement {
             
           }
 
+          .itemcontainer {
+            margin-top : 100px;
+            margin-left:auto;
+            margin-right:auto;
+            width : 100%;
+            border-box:1px solid red;
+         }
+
+          .itemcontainer > * {
+            box-sizing:border-box;
+            padding-right:32px;
+          }
+
+          .item1 {
+            flex:1;
+            min-width:270px;
+            flex-basis: 300px;
+            max-width:420px;
+          }
+
+          .item2 {
+            flex:2;
+            flex-basis: 600px;
+            min-width:540px;
+            max-width:900px;
+          }
+
+          .item3 {
+            flex:1;
+            min-width:300px;
+            flex-basis: 300px;
+            max-width:400px;
+          }
+
         </style>
 
         <app-drawer-layout id="drawerLayout" force-narrow>
@@ -184,74 +218,46 @@ class DemoApp extends PolymerElement {
                       LEFT BLACK
                   </div>
                   <div class="flex-9 rightmainbox">
-                      <page-toolbar>
-                          <div maintitle class="flex-1">
-                            <div class="flex">
-                                My Page2
-                            </div>
-                          </div>
-                         
-                          <div>
-                              <div class="layout horizontal center justified">
-                                  <paper-input lable="Top"></paper-input>
-                                  <paper-icon-button icon="add"></paper-icon-button>
-                              </div>
-                          </div>
-                      </page-toolbar>
-                      <div class="page-divider"></div>
-                      <div class="page-content">
-                            <content-header>XYZ Bank</content-header>
-                            <div class="layout horizontal ">
-                                <vertical-tabs class="flex-1">
-                                    <vertical-tab>General</vertical-tab>
-                                    <vertical-tab>Details</vertical-tab>
-                                    <vertical-tab>Additional</vertical-tab>
-                                </vertical-tabs>
-                                <div class="flex-7 form-container">
-                                  <div class="scrollable">
-                                    <fields-sub-header>
-                                        General
-                                    </fields-sub-header>
-                                    <fields-group type="auto">
-                                      <paper-input fld-m label="Name"></paper-input>
-                                      <paper-input fld-m label="Description"></paper-input>
-                                      <paper-input fld-m label="Age"></paper-input>
-                                      <paper-input fld-m label="Sex"></paper-input>
-                                      <paper-input fld-m label="Department"></paper-input>
-                                      <paper-input fld-m label="Organisation"></paper-input>
-                                      <paper-input fld-m label="City"></paper-input>
-                                      <paper-input fld-m label="Country"></paper-input>
-                                      <paper-input fld-m label="State"></paper-input>
-                                      <paper-input fld-l label="Purpose"></paper-input>
-                                      <paper-input fld-l label="Remarks"></paper-input>
-                                    </fields-group>
-                                    <fields-sub-header>
-                                    Details
-                                    </fields-sub-header>
-                                    <fields-group type="auto">
-                                    <paper-input fld-m label="Name"></paper-input>
-                                    <paper-input fld-m label="Description"></paper-input>
-                                    <paper-input fld-m label="Age"></paper-input>
-                                    <paper-input fld-m label="Sex"></paper-input>
-                                    </fields-group>
-
-                                    <fields-sub-header>
-                                    Additional
-                                    </fields-sub-header>
-
-                                    <fields-group type="auto">
-                                    <paper-input fld-m label="Free Field1"></paper-input>
-                                    <paper-input fld-m label="Free Field2"></paper-input>
-                                    <paper-input fld-m label="Free Field3"></paper-input>
-                                    <paper-input fld-m label="Free Field4"></paper-input>
-                                    </fields-group>
-                                </div>
-                                </div>
-                        </div>
+                    <div>
+                      <div class="layout horizontal itemcontainer wrap">
+                          <paper-input  label="field1" class="item1">
+                          </paper-input>
+                          <paper-input   label="field2" class="item2">
+                          </paper-input>
+                          <paper-input   label="field3" class="item3">
+                         </paper-input>
+                         <paper-input  label="field4" class="item1">
+                         </paper-input>
+                         <paper-input  class="item3">
+                          </paper-input >
+                          <paper-input  class="item3">
+                         </paper-input >
+                         <paper-input  class="item3">
+                           item3
+                         </paper-input >
+                         <paper-input  class="item3">
+                           item3
+                         </paper-input >
+                         <paper-input  class="item3">
+                           item3
+                         </paper-input>
                       </div>
-
-                     
-                    </div>
+                      <div class="layout horizontal itemcontainer">
+                          <div class="item1">
+                              item1
+                          </div>
+                          <div class="item2">
+                              item1
+                          </div>
+                          <div class="item2">
+                              item1
+                          </div>
+                          <div class="item3">
+                           item1
+                         </div>
+                      </div>
+                      </div>
+                  </div>
               </div>
          </div>
 
