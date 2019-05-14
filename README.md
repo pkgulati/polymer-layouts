@@ -135,3 +135,12 @@ https://github.com/PolymerElements/paper-tabs/issues/178
 ## Style
                     font-size  font-weight line-height
 paper-font-subhead  16px        400        24px
+
+### Add Holiday Example
+https://help.calamari.io/en/article/how-to-add-public-holidays-for-different-countries
+
+
+## gmail and Add holiday
+Left Navigation and Top area of right Area share same background color
+Content on right is white background
+
